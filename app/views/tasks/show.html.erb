@@ -1,0 +1,14 @@
+<div class="flex flex-col gap-4">
+  <h1 class="text-3xl font-bold"><%= @task.title %></h1>
+  <p><%= @task.details %></p>
+  <div class="flex items-center gap-2">
+    <input type="checkbox" <%= @task.completed ? 'checked' : '' %>>
+    <p>
+      <%= @task.completed ? 'This task is completed' : 'This task is not completed yet' %>
+    </p>
+  </div>
+  <%= render "back_to_list" %>
+  <%= link_to "Edit", edit_task_path(@task), class: "bg-blue-500 text-white text-center px-3 py-2 rounded-md hover:bg-blue-600" %>
+</div>
+
+

@@ -1,0 +1,11 @@
+<%= form_with model: task, class: "flex flex-col gap-2" do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "" %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <div class="flex items-center gap-2">
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+  </div>
+  <%= f.submit class: "bg-blue-500 text-white px-3 py-2 rounded-md hover:bg-blue-600" %>
+<% end %>
